@@ -1,7 +1,7 @@
 # first_app/urls.py
 
 from django.urls import path
-import views
+from first_app import views
 
 urlpatterns = [
     path("", views.start_page, name="start_page"),

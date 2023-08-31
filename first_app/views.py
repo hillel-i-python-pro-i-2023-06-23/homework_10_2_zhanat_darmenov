@@ -4,9 +4,8 @@ from django.http import HttpResponse
 
 
 def start_page(request):
-
-    return "Hello!"
+    return HttpResponse("Hello!")
 
 
 def user_information(request, username, age):
-    return f"User: {username} with Age: {age}."
+    return HttpResponse(f"User: {username} with Age: {age}.")
