@@ -64,3 +64,12 @@ Stop services
 ```shell
 make d-stop
 ```
+
+
+---
+
+Base page:
+"" or "/"
+
+Return User info:
+"<str:username>/<int:age>/"
