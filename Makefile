@@ -21,7 +21,7 @@ proj-i-run:
 # Docker Preparation:
 .PHONY: init-configs
 init-configs:
-	@cp ./docker-compose.override-example.yml docker-compose.override.yml
+	@cp ./docker-compose.override.dev.yml docker-compose.override.yml
 
 .PHONY: create-image
 create-image:

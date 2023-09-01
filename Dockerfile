@@ -11,6 +11,7 @@ RUN useradd --system ${USER} && \
     chown --recursive ${USER} ${WORKDIR}
 
 RUN apt update && apt upgrade -y
+RUN apt install -y curl
 
 COPY --chown=${USER} requirements.txt requirements.txt
 
@@ -18,8 +19,8 @@ RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
 COPY --chown=${USER} ./manage.py manage.py
-COPY --chown=${USER} ./first_app first_app
-COPY --chown=${USER} ./homework_10_2_zhanat_darmenov homework_10_2_zhanat_darmenov
+COPY --chown=${USER} ./ ./
+
 
 USER ${USER}
 

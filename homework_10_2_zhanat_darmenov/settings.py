@@ -43,7 +43,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-LOCAL_APPS=[
+LOCAL_APPS = [
     "first_app",
     "homework_10_2_zhanat_darmenov",
 ]
@@ -67,8 +67,7 @@ ROOT_URLCONF = "homework_10_2_zhanat_darmenov.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
