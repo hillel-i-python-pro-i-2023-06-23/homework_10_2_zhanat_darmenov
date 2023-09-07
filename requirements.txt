@@ -1,7 +1,7 @@
 # If Requirements are not installing, use New Interprener.
 
 # Generate Fake User-info:
-# Faker==19.2.0
+Faker==19.4.0
 
 # Read web_json files:
 # requests==2.31.0
@@ -10,7 +10,7 @@
 # pandas==2.0.3
 
 # Pre-commit hook:
-pre-commit==3.3.3
+pre-commit==3.4.0
 
 # Check codestyle:
 flake8==6.1.0
@@ -22,7 +22,7 @@ black==23.7.0
 pyupgrade==3.10.1
 
 # Remove unused imports & variables:
-autoflake==2.2.0
+autoflake==2.2.1
 
 # Django Lib:
-django==4.2.4
+django==4.2.5
