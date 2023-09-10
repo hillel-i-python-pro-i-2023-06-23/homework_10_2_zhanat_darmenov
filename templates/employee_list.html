@@ -1,0 +1,31 @@
+<!-- templates/employee_list.html -->
+
+{% extends "base.html" %}
+
+{% block title %}
+    Employee List
+{% endblock %}
+
+{% block content %}
+    <h1>Employee List:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in emp_list %}
+            <tr>
+                <td>{{ employee.full_name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.password }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'start_page' %}">Go back to Start Page</a>
+{% endblock %}
