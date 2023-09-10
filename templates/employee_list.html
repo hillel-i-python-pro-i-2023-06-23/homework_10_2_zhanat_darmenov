@@ -1,12 +1,12 @@
-<!--templates/employee_list.html-->
+<!-- templates/employee_list.html -->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Employee List</title>
-</head>
+{% extends "base.html" %}
 
-<body>
+{% block title %}
+    Employee List
+{% endblock %}
+
+{% block content %}
     <h1>Employee List:</h1>
     <table>
         <thead>
@@ -19,14 +19,13 @@
         <tbody>
             {% for employee in emp_list %}
             <tr>
-                <td>{{ employee.emp_full_name }}</td>
-                <td>{{ employee.emp_email }}</td>
-                <td>{{ employee.emp_password }}</td>
+                <td>{{ employee.full_name }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.password }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     <br>
     <a href="{% url 'start_page' %}">Go back to Start Page</a>
-</body>
-</html>
+{% endblock %}

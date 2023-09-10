@@ -37,7 +37,11 @@ def generate_some_employees(amount: int) -> Iterator[Employee]:
 
 def start_page(request):
     if request.method == "POST" and request.POST.get("action") == "Submit":
-        number = int(request.POST.get("quantity"))
+        quantity = request.POST.get("quantity")
+        if quantity:
+            number = int(quantity)
+        else:
+            number = 1
 
         return redirect(f"/employee-list/{number}/")
     print("START - = - = - = - = - = - = - = - =\n")
